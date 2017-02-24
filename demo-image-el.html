@@ -12,7 +12,7 @@
         }
     </style>
     <template>
-        <img src$="[[src]]">
+        <img src$="[[src]]" alt$="[[alt]]" is-content="attr" content-id="image-url" content-attr="src, alt">
     </template>
     <script>
         Polymer({
@@ -23,6 +23,12 @@
                     type: String,
                     value: '',
                     reflectToAttribute: true,
+                    notify: true
+                },
+
+                alt: {
+                    type: String,
+                    value: '',
                     notify: true
                 }
             }
